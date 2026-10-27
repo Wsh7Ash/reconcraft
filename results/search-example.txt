@@ -1,0 +1,10 @@
+ 18  wildcard-dns-handling                        Wildcard DNS Handling
+  6  active-subdomain-bruteforce                  Active Subdomain Bruteforce
+  4  dns-record-triage                            DNS Record Triage
+  3  asn-netblock-attribution                     ASN and Netblock Attribution
+  3  passive-subdomain-discovery                  Passive Subdomain Discovery
+  1  asset-inventory-baselining                   Asset Inventory Baselining
+  1  certificate-transparency-recon               Certificate Transparency Recon
+  1  dangling-cname-candidates                    Dangling CNAME Candidates
+  1  mail-infrastructure-mapping                  Mail Infrastructure Mapping
+  1  program-scope-parsing                        Program Scope Parsing

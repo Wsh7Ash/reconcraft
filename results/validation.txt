@@ -1,0 +1,2 @@
+reconcraft: 50/50 skills valid
+  ok  steps>=6 signals>=4 patterns>=3 pitfalls>=3 words>=180 refs canonical https

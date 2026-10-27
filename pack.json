@@ -1,0 +1,661 @@
+{
+  "name": "reconcraft",
+  "version": "1.0.0",
+  "category": "bug-bounty-tooling",
+  "license": "MIT",
+  "runtime": "Claude Code, opencode, or any agent runtime that loads SKILL.md files",
+  "description": "50 validated bug-bounty reconnaissance skills: authorized scope handling, enumeration, content discovery, fingerprinting, validation and hand-off, with a plan/coverage CLI for hunters and agents.",
+  "skill_count": 50,
+  "skills": [
+    {
+      "slug": "program-scope-parsing",
+      "title": "Program Scope Parsing",
+      "path": "skills/program-scope-parsing/SKILL.md",
+      "tags": [
+        "scope",
+        "program",
+        "triage"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "scope",
+      "sha256": "1843987830065e66bf1ce6e72a84b44a8b0044a0c6f2715e6f5e144b5543123f"
+    },
+    {
+      "slug": "asset-inventory-baselining",
+      "title": "Asset Inventory Baselining",
+      "path": "skills/asset-inventory-baselining/SKILL.md",
+      "tags": [
+        "inventory",
+        "baseline",
+        "scope"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "scope",
+      "sha256": "39e59cf42e4d0570b29a62dc85fa76f9d3a3186ada78fae475fd14636cbb0b08"
+    },
+    {
+      "slug": "authorization-proof-checklist",
+      "title": "Authorization Proof Checklist",
+      "path": "skills/authorization-proof-checklist/SKILL.md",
+      "tags": [
+        "authorization",
+        "compliance",
+        "safety"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "scope",
+      "sha256": "ef58d768635a147be0105599826e4fcaa3862387b1d3866941b49154cc0ef246"
+    },
+    {
+      "slug": "testing-window-and-rate-discipline",
+      "title": "Testing Window and Rate Discipline",
+      "path": "skills/testing-window-and-rate-discipline/SKILL.md",
+      "tags": [
+        "rate-limit",
+        "stability",
+        "scanning"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "scope",
+      "sha256": "5ee8558d69b6f231f8d5b959685b88d3da40a35db5e6c4dc11beee1f7ddb17b9"
+    },
+    {
+      "slug": "passive-subdomain-discovery",
+      "title": "Passive Subdomain Discovery",
+      "path": "skills/passive-subdomain-discovery/SKILL.md",
+      "tags": [
+        "subdomains",
+        "osint",
+        "passive"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "c0ec4132dfd000cf340a3cc359382d52237ed750dd21d40d1894a4b2cf211fdc"
+    },
+    {
+      "slug": "active-subdomain-bruteforce",
+      "title": "Active Subdomain Bruteforce",
+      "path": "skills/active-subdomain-bruteforce/SKILL.md",
+      "tags": [
+        "subdomains",
+        "dns",
+        "enumeration"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "8b36c94dad86ed71a73467f470ef48748363bfec33d30322e0d4c93c4a4bf361"
+    },
+    {
+      "slug": "subdomain-permutation-enumeration",
+      "title": "Subdomain Permutation Enumeration",
+      "path": "skills/subdomain-permutation-enumeration/SKILL.md",
+      "tags": [
+        "subdomains",
+        "wordlist",
+        "enumeration"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "f60830cb2bc2c5292e44b1e464f2862c92b846cb064320f722c94e7f47fa14c8"
+    },
+    {
+      "slug": "wildcard-dns-handling",
+      "title": "Wildcard DNS Handling",
+      "path": "skills/wildcard-dns-handling/SKILL.md",
+      "tags": [
+        "dns",
+        "wildcard",
+        "validation"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "1e0c861e1d90b4a082a9d153342715e06652f50f32ab8cfbaa0b0101bf98adc7"
+    },
+    {
+      "slug": "dns-record-triage",
+      "title": "DNS Record Triage",
+      "path": "skills/dns-record-triage/SKILL.md",
+      "tags": [
+        "dns",
+        "records",
+        "triage"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "410e9001d090d00514c12142bc5a972cc9a7cd51642ce73cf15254093a83b76f"
+    },
+    {
+      "slug": "dangling-cname-candidates",
+      "title": "Dangling CNAME Candidates",
+      "path": "skills/dangling-cname-candidates/SKILL.md",
+      "tags": [
+        "takeover",
+        "dns",
+        "risk"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "3b89cb30455ebb3af0e456797c68dc9b86f86ea88c0ca3f63dbb5df586cd7e03"
+    },
+    {
+      "slug": "shared-hosting-and-ip-attribution",
+      "title": "Shared Hosting and IP Attribution",
+      "path": "skills/shared-hosting-and-ip-attribution/SKILL.md",
+      "tags": [
+        "attribution",
+        "infrastructure",
+        "scope"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "eb9f2bd48c4cbe37a8c5ed2d30ececa2f902227806f3888411243f3c7e0c5bba"
+    },
+    {
+      "slug": "asn-netblock-attribution",
+      "title": "ASN and Netblock Attribution",
+      "path": "skills/asn-netblock-attribution/SKILL.md",
+      "tags": [
+        "asn",
+        "netblock",
+        "infrastructure"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "enumerate",
+      "sha256": "226fe319c6cc37b6ce01a57c6e466bb2ac5f801d909648a2377575db21a1e4ee"
+    },
+    {
+      "slug": "virtual-host-enumeration",
+      "title": "Virtual Host Enumeration",
+      "path": "skills/virtual-host-enumeration/SKILL.md",
+      "tags": [
+        "vhost",
+        "web",
+        "enumeration"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "enumerate",
+      "sha256": "c8b9950f735e4197865b32c7329eaab6fad003de3dba5c253539c0867d5d6861"
+    },
+    {
+      "slug": "alternate-port-service-discovery",
+      "title": "Alternate Port Service Discovery",
+      "path": "skills/alternate-port-service-discovery/SKILL.md",
+      "tags": [
+        "ports",
+        "services",
+        "discovery"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "enumerate",
+      "sha256": "81cc0bd6470f1a0f285a9f0c8f7464fadc2651da19e011ab26d130d07a530d2d"
+    },
+    {
+      "slug": "passive-osint-chaining",
+      "title": "Passive OSINT Chaining",
+      "path": "skills/passive-osint-chaining/SKILL.md",
+      "tags": [
+        "osint",
+        "passive",
+        "recon"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "enumerate",
+      "sha256": "1302996b1897aa8c153589a6d18a3b5a7a0043f8c9fd32b18670c36ab6f32924"
+    },
+    {
+      "slug": "content-discovery-with-wordlists",
+      "title": "Content Discovery with Wordlists",
+      "path": "skills/content-discovery-with-wordlists/SKILL.md",
+      "tags": [
+        "content-discovery",
+        "wordlist",
+        "paths"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "discover",
+      "sha256": "9c22e5cfed820d233ef50db3f17927adc0a5ec9d4a2f01af0f57712f2adf50c4"
+    },
+    {
+      "slug": "js-bundle-endpoint-mining",
+      "title": "JavaScript Bundle Endpoint Mining",
+      "path": "skills/js-bundle-endpoint-mining/SKILL.md",
+      "tags": [
+        "javascript",
+        "endpoints",
+        "discovery"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "discover",
+      "sha256": "9a815ceff7d025d1b73f5cb0c17e72723e93533509e44b613ff30f333fb9f485"
+    },
+    {
+      "slug": "source-map-recovery",
+      "title": "Source Map Recovery",
+      "path": "skills/source-map-recovery/SKILL.md",
+      "tags": [
+        "javascript",
+        "source-maps",
+        "build"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "discover",
+      "sha256": "2eb4dada11fcb3725f804e7a586fc5c1eee5a78457533e024e13cccdff5308b7"
+    },
+    {
+      "slug": "openapi-and-schema-discovery",
+      "title": "OpenAPI and Schema Discovery",
+      "path": "skills/openapi-and-schema-discovery/SKILL.md",
+      "tags": [
+        "api",
+        "openapi",
+        "schema"
+      ],
+      "meta_assets": "api",
+      "meta_phase": "discover",
+      "sha256": "cf4f92f1d0802f9151295d49b0f99c849041320183850c65c238c2fec045133d"
+    },
+    {
+      "slug": "robots-sitemap-wellknown-review",
+      "title": "Robots, Sitemap and Well-Known Review",
+      "path": "skills/robots-sitemap-wellknown-review/SKILL.md",
+      "tags": [
+        "paths",
+        "discovery",
+        "standards"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "discover",
+      "sha256": "ae00d80085dbace3c5c205b3284902cc167936af375571b8cb24e908614d0f05"
+    },
+    {
+      "slug": "hidden-parameter-discovery",
+      "title": "Hidden Parameter Discovery",
+      "path": "skills/hidden-parameter-discovery/SKILL.md",
+      "tags": [
+        "parameters",
+        "discovery",
+        "http"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "discover",
+      "sha256": "86c7114af4a7c6e743641deb688045ffd442a43c6a6fdca600585cab2ce6bfab"
+    },
+    {
+      "slug": "legacy-backup-file-discovery",
+      "title": "Legacy Backup File Discovery",
+      "path": "skills/legacy-backup-file-discovery/SKILL.md",
+      "tags": [
+        "files",
+        "backup",
+        "exposure"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "discover",
+      "sha256": "a02753e0d9122c6cef5adb18c3b03b4cba65a6295197c096df2f9ad989043220"
+    },
+    {
+      "slug": "deep-crawl-strategy",
+      "title": "Deep Crawl Strategy",
+      "path": "skills/deep-crawl-strategy/SKILL.md",
+      "tags": [
+        "crawling",
+        "coverage",
+        "frontier"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "discover",
+      "sha256": "4c6d1110d11e3d9caf24e76027691bf80aa2cb6a2358439de0803894eaf2fb1e"
+    },
+    {
+      "slug": "authenticated-crawl-workflows",
+      "title": "Authenticated Crawl Workflows",
+      "path": "skills/authenticated-crawl-workflows/SKILL.md",
+      "tags": [
+        "authentication",
+        "crawling",
+        "roles"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "discover",
+      "sha256": "befff69a2194e7fa2f391b4802bdf57b1841908c4a55d548715dfeb56769c981"
+    },
+    {
+      "slug": "shadow-api-version-discovery",
+      "title": "Shadow API Version Discovery",
+      "path": "skills/shadow-api-version-discovery/SKILL.md",
+      "tags": [
+        "api",
+        "versions",
+        "shadow"
+      ],
+      "meta_assets": "api",
+      "meta_phase": "discover",
+      "sha256": "bd9ad4c26dfd9737abfbcd9f5439b3031a58e151b6a568d5f3b761437b7dcf33"
+    },
+    {
+      "slug": "mobile-backend-endpoint-extraction",
+      "title": "Mobile Backend Endpoint Extraction",
+      "path": "skills/mobile-backend-endpoint-extraction/SKILL.md",
+      "tags": [
+        "mobile",
+        "api",
+        "static-analysis"
+      ],
+      "meta_assets": "api",
+      "meta_phase": "discover",
+      "sha256": "971c5948e5184d68cc1ec329bfc6ce845b5367767123a598e0f1098a40507a45"
+    },
+    {
+      "slug": "technology-fingerprinting",
+      "title": "Technology Fingerprinting",
+      "path": "skills/technology-fingerprinting/SKILL.md",
+      "tags": [
+        "fingerprint",
+        "stack",
+        "headers"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "fingerprint",
+      "sha256": "58631813f765d48d6f5e7b768fcf20c3c2475308b560ae6a500076b5fe8f8565"
+    },
+    {
+      "slug": "cms-framework-version-detection",
+      "title": "CMS and Framework Version Detection",
+      "path": "skills/cms-framework-version-detection/SKILL.md",
+      "tags": [
+        "version",
+        "cms",
+        "advisories"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "fingerprint",
+      "sha256": "e9e99f80ed6161b5fbef0a706bf6422501281b3483922ccac68c5a5c030fcaf5"
+    },
+    {
+      "slug": "middleware-header-analysis",
+      "title": "Middleware Header Analysis",
+      "path": "skills/middleware-header-analysis/SKILL.md",
+      "tags": [
+        "headers",
+        "middleware",
+        "http"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "fingerprint",
+      "sha256": "a74535a3e79aa8dcebd7216d79c897e9dd0087783625937f896eb9acb2ec043d"
+    },
+    {
+      "slug": "cdn-waf-origin-attribution",
+      "title": "CDN and WAF Origin Attribution",
+      "path": "skills/cdn-waf-origin-attribution/SKILL.md",
+      "tags": [
+        "cdn",
+        "origin",
+        "infrastructure"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "fingerprint",
+      "sha256": "138f342f0dc16af5c51baffbcbdfeee5057b100187bfc4510bb5d435f0cf08b0"
+    },
+    {
+      "slug": "third-party-service-fingerprinting",
+      "title": "Third-Party Service Fingerprinting",
+      "path": "skills/third-party-service-fingerprinting/SKILL.md",
+      "tags": [
+        "third-party",
+        "supply-chain",
+        "fingerprint"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "fingerprint",
+      "sha256": "cfccf452653a9d88a87f7d3af4f488fe8da780fe07963d03c8b8592f9c411346"
+    },
+    {
+      "slug": "certificate-transparency-recon",
+      "title": "Certificate Transparency Recon",
+      "path": "skills/certificate-transparency-recon/SKILL.md",
+      "tags": [
+        "certificates",
+        "osint",
+        "subdomains"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "fingerprint",
+      "sha256": "35bab413a0ee9278728ac5f08135f100839ffef199017c8d0db33a41ac605aee"
+    },
+    {
+      "slug": "favicon-hash-infra-fingerprint",
+      "title": "Favicon and Asset Hash Fingerprinting",
+      "path": "skills/favicon-hash-infra-fingerprint/SKILL.md",
+      "tags": [
+        "fingerprint",
+        "clustering",
+        "assets"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "fingerprint",
+      "sha256": "cd131d8cc8c0f314e790c9faa4341149cbc86d7d0d9eca6d517a05b11b877008"
+    },
+    {
+      "slug": "waf-presence-detection",
+      "title": "WAF Presence Detection",
+      "path": "skills/waf-presence-detection/SKILL.md",
+      "tags": [
+        "waf",
+        "filtering",
+        "http"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "fingerprint",
+      "sha256": "adf9cf54c4ac7c042cbb178af5d27d2c4e8747ef1f435a513ffe5636d49bc957"
+    },
+    {
+      "slug": "error-page-stacktrace-fingerprinting",
+      "title": "Error Page and Stacktrace Fingerprinting",
+      "path": "skills/error-page-stacktrace-fingerprinting/SKILL.md",
+      "tags": [
+        "errors",
+        "debugging",
+        "fingerprint"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "fingerprint",
+      "sha256": "669c4b5242bb0fd6b72c438584c41c7cb6de5b876e695cd5f8369e4b1296c7c5"
+    },
+    {
+      "slug": "client-dependency-inventory",
+      "title": "Client Dependency Inventory",
+      "path": "skills/client-dependency-inventory/SKILL.md",
+      "tags": [
+        "dependencies",
+        "components",
+        "inventory"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "fingerprint",
+      "sha256": "8134dd44270784a60aa632f162e07601497af1da2c3ddbc63a9bcb6238571d5a"
+    },
+    {
+      "slug": "canonical-host-and-aliasing-checks",
+      "title": "Canonical Host and Aliasing Checks",
+      "path": "skills/canonical-host-and-aliasing-checks/SKILL.md",
+      "tags": [
+        "canonical",
+        "hostnames",
+        "aliasing"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "validate",
+      "sha256": "f084096f256a801015a24fdfefada226c95ce7ca5776be213824c6cb634d383a"
+    },
+    {
+      "slug": "parameter-behavior-baselining",
+      "title": "Parameter Behavior Baselining",
+      "path": "skills/parameter-behavior-baselining/SKILL.md",
+      "tags": [
+        "parameters",
+        "baseline",
+        "http"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "validate",
+      "sha256": "8fed4a7926c359df1f2b8b13534bfa26ef9ddca72c2869570052cb9530e9872d"
+    },
+    {
+      "slug": "status-code-response-size-baselining",
+      "title": "Status Code and Response Size Baselining",
+      "path": "skills/status-code-response-size-baselining/SKILL.md",
+      "tags": [
+        "status-codes",
+        "triage",
+        "baseline"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "validate",
+      "sha256": "d588fc3873e962213f82bbdb41488098be5fb1739f7046a127e16eb8bcb8832f"
+    },
+    {
+      "slug": "object-id-surface-mapping",
+      "title": "Object ID Surface Mapping",
+      "path": "skills/object-id-surface-mapping/SKILL.md",
+      "tags": [
+        "idor",
+        "api",
+        "authorization"
+      ],
+      "meta_assets": "api",
+      "meta_phase": "validate",
+      "sha256": "27b6cd86ac4f9ffd6962430f79e8fbbb4b85ecf86c0fa670de57ba9d15b58c74"
+    },
+    {
+      "slug": "redirect-chain-mapping",
+      "title": "Redirect Chain Mapping",
+      "path": "skills/redirect-chain-mapping/SKILL.md",
+      "tags": [
+        "redirects",
+        "http",
+        "mapping"
+      ],
+      "meta_assets": "web",
+      "meta_phase": "validate",
+      "sha256": "699a463940e58ab22796d51499587d5b94a489bec2f754e19554ef71b50215ad"
+    },
+    {
+      "slug": "authentication-boundary-mapping",
+      "title": "Authentication Boundary Mapping",
+      "path": "skills/authentication-boundary-mapping/SKILL.md",
+      "tags": [
+        "authentication",
+        "boundaries",
+        "mapping"
+      ],
+      "meta_assets": "web,api",
+      "meta_phase": "validate",
+      "sha256": "cf8b4918df5352a586f375d2eb3fc993486651923b0309e6d31fcdd860374279"
+    },
+    {
+      "slug": "mail-infrastructure-mapping",
+      "title": "Mail Infrastructure Mapping",
+      "path": "skills/mail-infrastructure-mapping/SKILL.md",
+      "tags": [
+        "mail",
+        "dns",
+        "infrastructure"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "validate",
+      "sha256": "4e37558e0c0c02d46df545b25edb45c9e74a1658557ef0737378359e5fbf9258"
+    },
+    {
+      "slug": "cloud-asset-discovery",
+      "title": "Cloud Asset Discovery",
+      "path": "skills/cloud-asset-discovery/SKILL.md",
+      "tags": [
+        "cloud",
+        "assets",
+        "scope"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "validate",
+      "sha256": "accc3fd933b9beb225a3c4397d0a24aa14cb54be64796d01facbfa10cfb6636c"
+    },
+    {
+      "slug": "recon-snapshot-capture",
+      "title": "Recon Snapshot Capture",
+      "path": "skills/recon-snapshot-capture/SKILL.md",
+      "tags": [
+        "snapshots",
+        "reproducibility",
+        "notes"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "document",
+      "sha256": "068bba048366319d26af72d87943d5b99e17816ff380e20b5d398120897a565b"
+    },
+    {
+      "slug": "attack-surface-change-review",
+      "title": "Attack Surface Change Review",
+      "path": "skills/attack-surface-change-review/SKILL.md",
+      "tags": [
+        "diff",
+        "priorities",
+        "snapshots"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "document",
+      "sha256": "7242b2fcec5ebcdaefdb223ed090c562f127026c5357026095a7f6f084e5cc57"
+    },
+    {
+      "slug": "duplicate-hypothesis-checking",
+      "title": "Duplicate Hypothesis Checking",
+      "path": "skills/duplicate-hypothesis-checking/SKILL.md",
+      "tags": [
+        "triage",
+        "duplicates",
+        "reporting"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "document",
+      "sha256": "cde7fc229482bf7b6d0cdc1313876570031ccb6457fac77bf2b298aa346b11c4"
+    },
+    {
+      "slug": "evidence-capture-hygiene",
+      "title": "Evidence Capture Hygiene",
+      "path": "skills/evidence-capture-hygiene/SKILL.md",
+      "tags": [
+        "evidence",
+        "redaction",
+        "reporting"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "document",
+      "sha256": "d04e401c15b36dae7f756bffe2dcda35412505f0752ec92da9c50ca4bada0cbf"
+    },
+    {
+      "slug": "test-prioritization-handoff",
+      "title": "Test Prioritization Handoff",
+      "path": "skills/test-prioritization-handoff/SKILL.md",
+      "tags": [
+        "planning",
+        "handoff",
+        "priorities"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "document",
+      "sha256": "a48da58e1f3ae9d91277dd11207b65b96f4b7fc07b2d63c1f31cb048468438ec"
+    },
+    {
+      "slug": "recon-gap-audit",
+      "title": "Recon Gap Audit",
+      "path": "skills/recon-gap-audit/SKILL.md",
+      "tags": [
+        "coverage",
+        "audit",
+        "quality"
+      ],
+      "meta_assets": "all",
+      "meta_phase": "document",
+      "sha256": "b636bada15d3351eeaa1fed155e969390e81fefcbde4e4cd78c5121e0785c5a9"
+    }
+  ]
+}

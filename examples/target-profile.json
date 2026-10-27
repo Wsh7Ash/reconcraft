@@ -1,0 +1,5 @@
+{
+  "target": "example-bounty.demo",
+  "assets": ["web", "api"],
+  "notes": "Synthetic target used only to demonstrate `reconcraft plan`; no traffic is ever sent to it."
+}
