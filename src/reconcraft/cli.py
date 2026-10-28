@@ -101,7 +101,7 @@ def cmd_list(args: argparse.Namespace) -> int:
     skills = [
         skill
         for skill in SKILLS
-        if not args.tag or args.tag in skill.tags
+        if (not args.tag or args.tag in skill.tags)
         and (not args.phase or skill.meta_get("phase") == args.phase)
     ]
     if args.json:
